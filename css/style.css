@@ -225,3 +225,14 @@ span {
     display: block;
   }
 }
+
+/*zocial*/
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+  font-size: 1em;
+}
+
+[class*="iconicfill-"]:before {
+  font-family: 'IconicFill', sans-serif;
+  font-size: 1em;
+}
