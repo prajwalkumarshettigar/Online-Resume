@@ -23,7 +23,7 @@ var bio = {
         "location": "Mangalore"
     },
     "biopic": 'images/me.jpg',
-    "welcomeMessage": "Hola!, I am Prajwal, a creative Web Developer, I stand on the sweetspot where design and code intersects"
+    "welcomeMessage": "Hola! I am Prajwal, a creative Web Developer, I stand on the sweet spot where design and code intersects..."
 };
 
 bio.display = function() {
