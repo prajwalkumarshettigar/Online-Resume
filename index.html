@@ -1,54 +1,39 @@
 <!DOCTYPE html>
-
-<!--
-This is an HTML document. It contains information about how elements in the website
-are arranged. In other words, it describes the layout of a website.
-
-I can't wait to see the resumes you put together!
-
-Cameron Pittman, Udacity Course Developer
--->
-
-<!--
-The <head> of a website generally links to important resources the page will
-need to load. You'll see a lot of <link>s to CSS files for styles and
-<scripts> for JavaScript files to build interactions.
--->
 <html>
 <head>
-  <!-- This tells the browser how to read the document. -->
   <meta charset="utf-8">
-
-  <!-- Tells the browser what the title of this page should be. -->
   <title>Resume</title>
-
-  <!-- Load the page styles. -->
-  <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=zocial" />
+  <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=zocial" />
   <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=iconicfill" />
-
-
-
-  <!--
-  Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
-  -->
-<script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  <script src="js/jQuery.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/style.css" rel="stylesheet">
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-  <div id="main">
-
-
-    <!--
-    Everything from here to the <script> tag below is the skeleton of your
-    website. Your code will add information to each of the sections of the
-    resume below. You can pretty easily figure out what each section will
-    display by looking at the id or at what's written between the <h2> tags.
-    -->
-    <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
-    </div>
+  <div id="main" class="container-fluid">
+  <header>
+      <div id="header" class="row clear-fix center-content">
+          <nav class="navbar navbar-inverse">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                <span class="navbar-brand">Contact</span>
+                </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul id="topContacts" class="nav navbar-nav navbar-items center-content1 pull-right"> </ul>
+                    </div>
+              </div>
+          </nav>
+      </div>
+   </header>
     <div style="clear: both;"></div>
     <div id="workExperience" class="gray">
       <h2>Work Experience</h2>
