@@ -17,7 +17,7 @@ var bio = {
     "role": role,
     "skills": ["HTML5", "Javascript", "CSS3"],
     "contacts": {
-        "email": "69pk666.com",
+        "email": "69pk666@gmail.com",
         "mobile": "9902363772",
         "github": "prajwalkumarshettigar",
         "location": "Mangalore"
