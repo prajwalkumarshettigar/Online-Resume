@@ -1,17 +1,18 @@
-var name = "Prajwal Kumar";
-var role = "Front End Web Developer"
-function inName(name) {
-    name = name.trim().split(" ");
-    console.log(name);
-    name[1] = name[1].toUpperCase();
-    name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
-    return name[0] + " " + name[1];
+var myName = "Prajwal Kumar";
+var role = "Front End Web Developer";
+
+function inName(myName) {
+    myName = myName.trim().split(" ");
+    console.log(myName);
+    myName[1] = myName[1].toUpperCase();
+    myName[0] = myName[0].slice(0, 1).toUpperCase() + myName[0].slice(1).toLowerCase();
+    return myName[0] + " " + myName[1];
 }
 
 $("#main").append(internationalizeButton);
 
 var bio = {
-    "name": name,
+    "name": myName,
     "role": role,
     "skills": ["HTML5", "Javascript", "CSS3"],
     "contacts": {
@@ -54,31 +55,29 @@ bio.display();
 
 
 var work = {
-    "jobs": [
-    {
-        "title" : "Systems Engineer",
-        "employer" : "Infosys",
-        "dates" : "2016-present",
-        "location" : "Mysore,India",
-        "description" : "Systems engineering uses a host of tools that include modeling and simulation, requirements analysis and scheduling to manage complexity. Systems engineering is an interdisciplinary field of engineering that focuses on how to design and manage complex systems over their life cycles."
-    }
-   ]
+    "jobs": [{
+        "title": "Systems Engineer",
+        "employer": "Infosys",
+        "dates": "2016-present",
+        "location": "Mysore,India",
+        "description": "Systems engineering uses a host of tools that include modeling and simulation, requirements analysis and scheduling to manage complexity. Systems engineering is an interdisciplinary field of engineering that focuses on how to design and manage complex systems over their life cycles."
+    }]
 };
 
 function displayWork() {
-for(job = 0; job < work.jobs.length; job++) {
-    $("#workExperience").append(HTMLworkStart);
+    for (job = 0; job < work.jobs.length; job++) {
+        $("#workExperience").append(HTMLworkStart);
 
-    var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-    var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-    var formattedEmployerTitle = formattedEmployer + formattedTitle;
-    var fromattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-    var formttedDate = HTMLworkDates.replace("%data%",work.jobs[job].dates);
-    var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+        var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+        var formattedEmployerTitle = formattedEmployer + formattedTitle;
+        var fromattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+        var formttedDate = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+        var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 
-    $(".work-entry:last").append(formattedEmployerTitle, fromattedLocation, formttedDate, formattedDescription);
-};
-};
+        $(".work-entry:last").append(formattedEmployerTitle, fromattedLocation, formttedDate, formattedDescription);
+    }
+}
 
 displayWork();
 
@@ -118,51 +117,51 @@ if (projects.projects.length > 0) {
 }
 
 var education = {
-        "schools": [{
+    "schools": [{
         "name": "Srinivas Inistitute of Technology",
         "location": "Valachil, Mangalore",
-        "degree" : "Bachelors Degree",
-        "majors" : ["Electronics & Communication Engineering"],
-        "dates" : "2016",
-        "url" : "www.http://srinivasgroup.com/"
+        "degree": "Bachelors Degree",
+        "majors": ["Electronics & Communication Engineering"],
+        "dates": "2016",
+        "url": "www.http://srinivasgroup.com/"
     }],
     "onlineCourses": [{
-        "school" : "UDACITY",
-        "title" : "FEND",
-        "dates" : "2016",
-        "url" : "www.udacity.com"
+        "school": "UDACITY",
+        "title": "FEND",
+        "dates": "2016",
+        "url": "www.udacity.com"
     }]
 };
 
 education.display = function() {
-            $("#education").append(HTMLschoolStart);
+    $("#education").append(HTMLschoolStart);
 
-    for(school = 0; school < education.schools.length; school++){
-            var formattedschool = HTMLschoolName.replace("%data%", education.schools[school].name);
-            var formatteddegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-            var formatteddate = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-            var formattedlocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-            var formattedschoolurl = HTMLschoolURL.replace("%data%", education.schools[school].url);
-            $(".education-entry:last").append(formattedschool, formatteddegree, formatteddate, formattedlocation, formattedschoolurl);
-            for (var major = 0; major < education.schools[school].majors.length; major++) {
-                var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors[major]);
-                $(".education-entry:last").append(formattedMajor);
-            }
-            if (school + 1 != education.schools.length) {
-                $(".education-entry:last").append("<hr>");
-            }
+    for (school = 0; school < education.schools.length; school++) {
+        var formattedschool = HTMLschoolName.replace("%data%", education.schools[school].name);
+        var formatteddegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+        var formatteddate = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+        var formattedlocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+        var formattedschoolurl = HTMLschoolURL.replace("%data%", education.schools[school].url);
+        $(".education-entry:last").append(formattedschool, formatteddegree, formatteddate, formattedlocation, formattedschoolurl);
+        for (var major = 0; major < education.schools[school].majors.length; major++) {
+            var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors[major]);
+            $(".education-entry:last").append(formattedMajor);
         }
-        $(".education-entry:last").append("<hr>");
-        if (education.onlineCourses.length > 0) {
-            $("#education").append(HTMLonlineClasses);
-            for (var course = 0; course < education.onlineCourses.length; course++) {
-                var formatedtitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
-                var formatedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
-                var formatedDate = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
-                var formatedurl = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
-                $(".online-entry:last").append(formatedOnlineSchool, formatedtitle, formatedDate, formatedurl, "<hr>");
-            }
+        if (school + 1 != education.schools.length) {
+            $(".education-entry:last").append("<hr>");
         }
+    }
+    $(".education-entry:last").append("<hr>");
+    if (education.onlineCourses.length > 0) {
+        $("#education").append(HTMLonlineClasses);
+        for (var course = 0; course < education.onlineCourses.length; course++) {
+            var formatedtitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
+            var formatedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
+            var formatedDate = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
+            var formatedurl = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
+            $(".online-entry:last").append(formatedOnlineSchool, formatedtitle, formatedDate, formatedurl, "<hr>");
+        }
+    }
 };
 
 if (education.schools.length > 0) {

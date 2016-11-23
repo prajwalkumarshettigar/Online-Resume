@@ -32,6 +32,10 @@ h1 {
   display: inline;
 }
 
+#role {
+  color: #aaa;
+}
+
 h2 {
   font-weight: bold;
   font-size: 24px;
@@ -130,7 +134,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #666;
+  background-color: #484848;
 }
 
 .flex-box {
