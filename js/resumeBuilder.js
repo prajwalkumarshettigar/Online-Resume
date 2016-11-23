@@ -15,7 +15,7 @@ $("#main").append(internationalizeButton);
 var bio = {
     "name": myName,
     "role": role,
-    "skills": ["HTML5", "Javascript", "CSS3"],
+    "skills": ["HTML5", "CSS3", "JavaScript", "BootStrap", "jQuery"],
     "contacts": {
         "email": "69pk666@gmail.com",
         "mobile": "9902363772",
