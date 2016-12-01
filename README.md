@@ -1,4 +1,4 @@
-# online Resume
+# Online-Resume
 ##Intro
 Using jQuery, this is an interactive resume application that reads all data from a JSON file and then dynamically modifies the DOM to display the information. Further customized the project by personalizing the design using CSS.
 ##How to Run
